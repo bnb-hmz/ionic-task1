@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="id1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Stores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item *ngFor="let store of stores" [routerLink]="['./', store.id]">
+    <ion-label>{{store.name}}</ion-label>
+    <ion-label>{{store.wilaya}}</ion-label>
+    <ion-label>{{store.city}}</ion-label>
+  </ion-item>
+</ion-list>
+</ion-content>

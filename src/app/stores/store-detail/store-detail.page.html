@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/stores"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Store-detail {{loadedStore.id}}</ion-title>
+    <ion-butttons slot="primary">
+      <ion-buttton (click)="onDeleteStore()">
+        <ion-icon name="trash" slot="icon-only"></ion-icon>
+      </ion-buttton>
+    </ion-butttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col>
+        <h1 text-center>
+          {{loadedStore.name}}
+        </h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col no-padding>
+        {{loadedStore.wilaya}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        {{loadedStore.city}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-list>
+        <ion-item></ion-item>
+      </ion-list>
+    </ion-row>
+    
+  </ion-grid>
+</ion-content>
